@@ -7,6 +7,7 @@ import { Button, ButtonTheme } from "@/shared/ui/Button/Button";
 import LogInIcon from "@/assets/log-in-03-svgrepo-com.svg?react";
 import { Theme, useTheme } from "@/app/Theme/ui";
 import { LoginModal } from "@/app/features/AuthByUserName";
+import { AuthContainerModal } from "@/app/features/AuthContainer/AuthContainerModal";
 
 interface NavbarProps {
   className?: string;
@@ -47,7 +48,7 @@ export const Navbar = ({ className }: NavbarProps) => {
         />
       </Button>
 
-      <LoginModal onClose={onCloseModal} isOpen={isAuthModal} />
+      <AuthContainerModal onClose={onCloseModal} isOpen={isAuthModal} />
 
       <ThemeSwitcher />
     </div>

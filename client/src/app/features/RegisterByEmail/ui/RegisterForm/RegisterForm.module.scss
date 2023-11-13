@@ -1,0 +1,16 @@
+.RegisterForm {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+  
+    .RegisterBtn {
+      margin-top: 0.8em;
+    }
+  }
+  
+  input {
+    margin-top: 0.8em;
+    height: 32px;
+    width: 100%;
+  }
+  

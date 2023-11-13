@@ -1,7 +1,9 @@
+/* eslint-disable react-refresh/only-export-components */
 import React, { FC } from "react";
 import cls from "./AppLink.module.scss";
 import { Link, LinkProps } from "react-router-dom";
 import { classNames } from "@/shared/lib/classNames";
+
 export enum AppLinkTheme {
   PRIMARY = "primary",
   SECONDARY = "secondary",
