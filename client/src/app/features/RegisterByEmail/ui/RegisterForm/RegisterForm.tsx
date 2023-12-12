@@ -1,21 +1,36 @@
 // RegisterForm.jsx
-import React from "react";
+import React, { useState } from "react";
 import cls from "./RegisterForm.module.scss";
 import { classNames } from "@/shared/lib/classNames";
 import { Button } from "@/shared/ui/Button/Button";
 import { Input } from "@/shared/ui/Input/ui/Input";
 
 export interface RegisterFormProps {
-    className?: string;
     onToggle: () => void;
 }
 
-export const RegisterForm = ({ className, onToggle }: RegisterFormProps) => {
+export const RegisterForm = ({ onToggle }: RegisterFormProps) => {
+
+    const [pass, setPass] = useState('')
+    const [email, setEmail] = useState('')
+
     return (
-        <div className={classNames(cls.RegisterForm, {}, [className])}>
+        <div className={classNames(cls.RegisterForm, {}, [])}>
             <h2 className={cls.title}>Register</h2>
-            <Input placeholder="Email" className={cls.input} />
-            <Input placeholder="Password" className={cls.input} />
+            <Input
+                value={email}
+                type="email"
+                onChange={(value) => setEmail(value)}
+                placeholder="Email"
+                className={cls.input} />
+
+            <Input
+                value={pass}
+                type="password"
+                onChange={(value) => setPass(value)}
+                placeholder="Password"
+                className={cls.input} />
+
             <Button className={cls.registerBtn} >
                 Register
             </Button>

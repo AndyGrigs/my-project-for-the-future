@@ -7,7 +7,7 @@ const AuthContainer = () => {
   const [isRegisterVisible, setRegisterVisible] = useState(true);
 
   const handleToggle = () => {
-    setRegisterVisible(!isRegisterVisible);
+    setRegisterVisible(prev => !prev);
   };
 
   return (

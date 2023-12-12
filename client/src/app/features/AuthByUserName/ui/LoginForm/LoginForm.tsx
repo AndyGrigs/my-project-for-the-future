@@ -4,6 +4,8 @@ import cls from "./LoginForm.module.scss";
 import { classNames } from "@/shared/lib/classNames";
 import { Button } from "@/shared/ui/Button/Button";
 import { Input } from "@/shared/ui/Input/ui/Input";
+import { useDispatch } from "react-redux";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
 export interface LoginFormProps {
     className?: string;
@@ -11,6 +13,14 @@ export interface LoginFormProps {
 }
 
 export const LoginForm = ({ className, onToggle }: LoginFormProps) => {
+
+    const dispatch = useDispatch()
+
+    const handleLogin = (email, password) => {
+        const auth = getAuth();
+        signInWithEmailAndPassword(auth, email, password)
+    }
+
     return (
         <div className={classNames(cls.LoginForm, {}, [className])}>
             <h2 className={cls.title}>Login</h2>

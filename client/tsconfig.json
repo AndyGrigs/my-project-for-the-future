@@ -34,7 +34,9 @@
     "strictNullChecks": false
   },
   "include": [
-    "src"
+    "src",
+    "types/vite-env.d.ts",
+    "vite-env.d.ts"
   ],
   "references": [
     {
