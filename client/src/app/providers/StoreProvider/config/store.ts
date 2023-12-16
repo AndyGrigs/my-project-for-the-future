@@ -4,14 +4,16 @@ import { counterReducer } from "@/app/entities/Counter";
 import { userReducer } from "@/app/entities/User";
 
 export function createReduxStore(initialState?: StateSchema) {
-
   const rootReducers: ReducersMapObject<StateSchema> = {
     counter: counterReducer,
-    user: userReducer
-  }
+    user: userReducer,
+  };
 
   return configureStore<StateSchema>({
     reducer: rootReducers,
     preloadedState: initialState,
   });
 }
+export const store = createReduxStore();
+
+export type AppDispatch = typeof store.dispatch;

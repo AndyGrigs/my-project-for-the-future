@@ -1,18 +1,24 @@
 export interface User {
-    name: string;
-    id: number;
-    email: string;
-    password: string;
-    nativeLanguage: string;
-    learningLanguage: string;
-    currentLevel: string;
-    learningGoals: string[];
-    progress: number;
-    completedLessons: string[];
-    favoriteWords: string[];
-    notes: string[];
+  name: string;
+  id: number;
+  email: string;
+  password: string;
+  nativeLanguage: string;
+  learningLanguage: string;
+  currentLevel: string;
+  learningGoals: string[];
+  progress: number;
+  completedLessons: string[];
+  favoriteWords: string[];
+  notes: string[];
 }
 
 export interface UserSchema {
-    authData?: User
+  authData?: User;
+}
+
+export interface RegistrationData {
+  name: string;
+  email: string;
+  password: string;
 }
