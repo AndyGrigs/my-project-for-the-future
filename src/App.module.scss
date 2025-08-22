@@ -1,0 +1,43 @@
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0f23 0%, #1a1a3e 100%);
+  color: #ffffff;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.main {
+  padding: 2rem 0 4rem;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .main {
+    padding: 1rem 0 2rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .controls {
+    margin-bottom: 2rem;
+  }
+}
